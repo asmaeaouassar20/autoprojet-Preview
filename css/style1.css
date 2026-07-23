@@ -887,6 +887,7 @@ img {
 
 .reservation-form {
 	gap: 8px 8px;
+	flex-wrap: nowrap;
 }
 
 .reservation-form .form-group-time .date {
@@ -1183,6 +1184,9 @@ footer .footer-cad .footer-cad2 .copyright {
    ============================================================ */
 
 @media (max-width: 1024px) {
+	.reservation-form{
+		flex-wrap: wrap;
+	}
 	.reservation-form .form-group {
 		width: 45%;
 		margin: 6px 10px;
