@@ -1,0 +1,1883 @@
+/* index.php - login - inscription  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* font-family: 'Roboto', sans-serif; */
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+  .cacher{
+		display: none !important;
+}
+
+		.ZN-top-form{
+			display: flex; justify-content: center;align-items: center;
+			height: auto;
+		}
+		.ZN-top-form .ZN-top-form-cad{
+			width: 1300px;
+			height: 355px;
+			background-image: url('../img/fond/fond.png');
+			background-size: cover; 
+			background-position: center;
+		
+		}
+		
+		.ZN-top-form .ZN-top-form-cad .top{
+			width: 65%;
+			margin: 80px 0 0 80px;
+		}
+		.ZN-top-form .ZN-top-form-cad .top h1{
+			font-family: "Montserrat", "Poppins", sans-serif;
+			color: #fff;
+		}
+		.ZN-top-form .ZN-top-form-cad .top h5{
+			margin-top: 10px;
+			font-family: "Open Sans", "Roboto", sans-serif;
+			color: #fff;
+		}
+		.ZN-top-form .ZN-top-form-cad .search{
+			margin-top:35px;
+			margin-left: 80px;
+			width: auto;
+		}
+		
+		/*  catégories de voitures */
+		.ZN-categories{
+			width: 100%;
+			display: flex;justify-content: center;align-items: center;
+			
+		}
+		.ZN-categories .ZN-categories-cad{
+			width: 1300px;
+			background: #F5F2F2;
+			padding: 0 16px 25px 16px; /*asmae*/
+		}
+		.titre-index{
+			 font-family: "Segoe UI", Roboto, Arial, sans-serif;
+			font-size: 22px;
+			font-weight: 600;
+			color: #1f2937;
+			margin: 30px 0;
+			letter-spacing: 0.5px;
+		}
+		.titre-index .cat {
+			color: #2563eb;
+			position: relative;
+			font-weight: 700;
+		}
+		.ZN-categories .ZN-categories-cad .categories-conteneur{
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			column-gap: 20px;
+		}
+		.ZN-categories .ZN-categories-cad .categories-conteneur .categorie{
+			border-radius: 7px;
+			background: #fff;
+			padding-bottom: 10px;
+			cursor: pointer;
+		}
+		.ZN-categories .ZN-categories-cad .categories-conteneur .categorie .img{
+			text-align: center;
+		}
+		.ZN-categories .ZN-categories-cad .categories-conteneur .categorie .img img{
+			width: 70%;
+		}
+		.ZN-categories .ZN-categories-cad .categories-conteneur .categorie h3{
+			text-align: center;
+		}
+		
+		
+		
+		
+		/*  marques populaires  */
+		.ZN-marques{
+			display: flex;justify-content: center;align-items: center;margin-top: 20px;
+		}
+		.ZN-marques .ZN-marques-cad{
+			width: 1300px; /* asmae */
+			padding: 0 16px 25px 16px;
+		}	
+		.ZN-marques .ZN-marques-cad .carrousel{
+			overflow-x: auto;
+			display: flex;
+			width: 90%;
+			margin: 0 auto;
+			height: 100px;
+			margin-bottom: 35px;
+		}
+		.ZN-marques .ZN-marques-cad .carrousel::-webkit-scrollbar{
+			display: none;
+		}
+
+		.ZN-marques .ZN-marques-cad h2{
+			
+		}
+		.ZN-marques .ZN-marques-cad .marques-conteneur{
+			display: flex;
+			gap: 50px;
+			animation: marques-animation 40s infinite linear;
+			padding-left: 50px;
+		}
+		.ZN-marques .ZN-marques-cad .carrousel:hover .marques-conteneur{
+			animation-play-state: paused;
+		}
+		@keyframes marques-animation{
+			from {translate :0%;} to{translate: -100%;}
+		}
+		.ZN-marques .ZN-marques-cad .marques-conteneur .marque{
+			 flex: 0 0 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+		
+		
+		.ZN-marques .ZN-marques-cad .marques-conteneur .marque img{
+			width: 100%;
+		}
+		
+		
+		/* Pourquoi nous choisir */
+		.ZN-pk-nous{
+			display: flex;justify-content: center; align-items: center;margin-top:42px;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad{
+			width: 1300px;
+			padding:0 16px 25px 16px;
+			background: #F5F2F2;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad .cards{
+			display: flex;	
+			gap: 50px;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad .cards .card{
+			border-right: 1px solid #222;
+			padding-right: 15px;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad .cards .card h5{
+			font-size:20px;
+			margin-bottom:10px; 
+			color:#111;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad .cards .card p{
+			color:#666;
+			font-size:15px;
+			line-height:1.6;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad .btn{
+			text-align: center;
+			margin-top: 20px;
+		}
+		.ZN-pk-nous .ZN-pk-nous-cad a{
+			margin-top:45px;
+			padding: 6px 35px;
+			border:none;
+			border-radius:30px;
+			background:linear-gradient(135deg,#D96666,#C93C3C);
+			color:white;
+			font-size: 13px;
+			font-weight:600;
+			cursor:pointer;
+			transition:0.3s;
+		}
+
+		.ZN-pk-nous .ZN-pk-nous-cad a:hover{
+			transform:translateY(-3px);
+			box-shadow:0 10px 25px #8A5C5C;
+		}
+		
+		
+		
+		/* Villes */
+		.ZN-villes{
+			display: flex; justify-content: center; align-items: center;
+		}
+		.ZN-villes .ZN-villes-cad{
+			width: 1300px; /* asmae  */
+			padding: 0 16px 25px 16px;
+		}
+		.ZN-villes .ZN-villes-cad .carroussel{
+			 margin: 18px 0;
+			display: flex;
+			justify-content: center;
+			overflow-x: auto;
+			overflow-y: hidden;
+			scrollbar-width: none;
+		}
+		.ZN-villes .ZN-villes-cad .see-more{
+			 text-align: end;
+			font-size: 13px;
+			padding-right: 76px;
+		}
+		.ZN-villes .ZN-villes-cad .carroussel .container{
+			display: flex;
+			gap: 20px;
+		}
+		.ZN-villes .ZN-villes-cad .carroussel .container .image{
+			position: relative;
+			flex: 0 0 13rem;
+		}
+		.ZN-villes .ZN-villes-cad .carroussel .container .image .label{
+			font-size: 22px;
+			position: absolute;
+			top: 33%;
+			height: 42%;
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.ZN-villes .ZN-villes-cad .carroussel .container .image img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+
+		
+		.ZN-contact{
+			display: flex; justify-content: center;align-items: center;margin-top: 20px;
+		}
+		.ZN-contact .ZN-contact-cad{
+			width: 1300px;
+			padding: 0 16px 25px 16px;
+		}
+		.ZN-contact .ZN-contact-cad .desc{
+			text-align: center;
+			font-size: 16px;
+		    line-height: 1.7;
+		    color: #555;
+		    margin: 0px auto 18px auto;
+		    text-align: center;
+		    font-weight: 400;
+		    letter-spacing: 0.3px;
+		    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+		}
+		.ZN-contact .ZN-contact-cad h2{
+			text-align: center;
+		}
+		.ZN-contact .ZN-contact-cad .contacts{
+			display: flex;
+			gap:15px;
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card{
+			display: flex;
+			gap: 15px;
+			background: #ffffff;
+			padding: 20px;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card:hover{
+			box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card .icon{
+			 display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 28px;
+			background: #f1f5ff;
+			color: #3b5bdb;
+			width: 25%;
+			display: flex;
+			border-radius: 12px;
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card .icon svg{
+			width: 45px;
+    		height: 30px;
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card .infos h6{
+			margin: 0;
+			font-size: 16px;
+			font-weight: 600;
+			color: #222;
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card .infos p{
+			margin: 5px 0;
+			font-size: 14px;
+			color: #666;
+		}
+		.ZN-contact .ZN-contact-cad .contacts .card .infos span{
+			font-size: 13px;
+			font-weight: 500;
+			color: #3b5bdb;
+		}
+		
+		
+		.ZN-newsletter{
+			display: flex; justify-content: center; align-items: center;margin-top: 20px;
+		}
+		.ZN-newsletter .ZN-newsletter-cad{
+			width: 1300px;
+			padding: 0 16px 25px 16px;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter{
+			display: flex;justify-content: center;align-items: center; flex-direction: column;
+			padding: 35px;
+			background: #ffffff;
+			border-radius: 14px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+			font-family: Arial, Helvetica, sans-serif;
+		}	
+		.ZN-newsletter .ZN-newsletter-cad .newletter h3{
+			text-align: center;
+			 font-size: 24px;
+			margin: 20px 0 30px 0;
+			color: #1e293b;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .desc{
+			text-align: center;
+			display: block;
+			font-size: 14px;
+			color: #64748b;
+			margin-bottom: 25px;
+			line-height: 1.5;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .desc a{
+			 color: #2563eb;
+			text-decoration: none;
+			font-weight: 500;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .desc a:hover{
+			text-decoration: underline;	
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance{
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			width: 77%;
+			padding: 13px;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+			background: rgba(0, 0, 0, 0.03);
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing{
+			width: 75%;
+			display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .msg_err_global {
+			color: #DC3545;			
+			font-size: 13px;
+			font-style: italic;
+			height: 20px;
+			display: block;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing .mail{
+			margin-bottom: 7px;
+			width: 100%;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing input{
+			padding: 12px 14px;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			font-size: 14px;
+			outline: none;
+			transition: 0.2s;
+			width: 80%;
+			display: block;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing input:focus{
+			border-color: #2563eb;
+    		box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing button{
+			 padding: 12px 18px;
+			margin-left: 8px;
+			border: none;
+			border-radius: 8px; 
+			background: #2563eb;
+			color: white;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: 0.2s;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing button:hover{
+			background: #1d4ed8;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .contactez-nous{
+			align-items: center;
+			gap:10px;
+			display: flex;
+			flex-direction: column;
+			font-size: 14px;
+			color: #334155;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .contactez-nous a{
+			 text-decoration: none;
+			color: #2563eb;
+			font-weight: 500;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .contactez-nous a:hover{
+			text-decoration: underline;
+		}
+		.ZN-newsletter .ZN-newsletter-cad .newletter .assistance .contactez-nous .icone svg{
+			width: 50px;
+			height: 50px;
+		}
+		
+
+		/* galeries avant footer  */
+		.ZN-qlq-vehicule{
+			display: flex; justify-content: center; align-items: center;margin-top: 20px;
+		}
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad{
+			width: 1300px;
+			padding: 0 16px 25px 16px;
+		}
+
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container{	
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 25px;
+		}
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card{
+			flex: 0 0;		
+			padding: 4px 30px;			
+			border-radius: 5px;
+			cursor: pointer;
+		}	
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card:hover{
+			box-shadow: 2px 2px 5px #888;
+		}
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card .desc h4 {
+			font-size: 13px;
+			color: #222;
+    		margin-bottom: 5px;
+		}
+
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card .desc p {
+			font-size: 11.5px;
+			color: #555;
+		}
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card img{
+			 width: 245px;
+    		height: 145px;
+			border-radius: 10px;			
+			object-fit: contain;
+			object-position: center;
+		}
+		.ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container .card .desc{
+			padding: 5px 10px;
+		}
+
+
+
+
+
+
+
+/* ------------ section : authentification ------------------ */
+
+
+.ZN-AUTH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ZN-AUTH .CAD {
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
+
+.ZN-AUTH .auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px;
+	
+}
+
+.ZN-AUTH .auth-form {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 30px 25px;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.ZN-AUTH .auth-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ZN-AUTH .auth-header h2 {
+    color: #2A2A2A;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ZN-AUTH .auth-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Corps du formulaire */
+.ZN-AUTH .auth-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ZN-AUTH .msg_err_global {
+    color: #DC3545;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    height: 20px;
+    display: block;
+}
+
+.ZN-AUTH .msg_err {
+    color: #DC3545;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 4px;
+    display: block;
+    height: 16px;
+    /*visibility: hidden;*/
+    padding-left: 40px; /* Aligné avec l'icône */
+}
+
+.ZN-AUTH .msg_err.show {
+    visibility: visible;
+}
+
+/* Champs de formulaire */
+.ZN-AUTH .input_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ZN-AUTH .input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fcfcfc;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.ZN-AUTH .input-wrapper:focus-within {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+.ZN-AUTH .input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 45px;
+    color: #666;
+}
+
+.ZN-AUTH .input-icon-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 45px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+
+
+/* Input */
+.ZN-AUTH .input-wrapper input {
+    flex: 1;
+    height: 45px;
+    border: none;
+    background: transparent;
+    padding: 0 5px;
+    font-size: 14px;
+    outline: none;
+    color: #2F2F2F;
+}
+
+.ZN-AUTH .input-wrapper input::placeholder {
+    color: #999;
+}
+
+#hide_pswrd {
+    display: none;
+}
+
+.ZN-AUTH .forgot-password {
+    text-align: right;
+    margin-top: -5px;
+}
+
+.ZN-AUTH .forgot-password a {
+    color: #666;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.ZN-AUTH .forgot-password a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Bouton de connexion */
+.ZN-AUTH .form_item_btn {
+    margin-top: 10px;
+}
+
+.ZN-AUTH .form_item_btn button {
+    width: 100%;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.ZN-AUTH .form_item_btn button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.ZN-AUTH .form_item_btn button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Séparateur */
+.ZN-AUTH .separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.ZN-AUTH .separator::before,
+.ZN-AUTH .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ZN-AUTH .separator span {
+    margin: 0 10px;
+}
+
+/* Bouton OAuth (Google) */
+.ZN-AUTH .btn-oauth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 45px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ZN-AUTH .btn-oauth:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+/* Lien vers l'inscription */
+.ZN-AUTH .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.ZN-AUTH .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+	margin-left: 8px;
+}
+
+.ZN-AUTH .signup-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+ 
+#ico_email_incorrect, #ico_email_correct{
+	display:none;
+}
+
+
+
+
+
+/*==== reset password */
+.ZN-reset-psw{
+    width: 100%;
+    background-color: #dcd4d43b;
+    display: flex;justify-content: center;align-items: center;
+    height: 500px;
+}
+
+.ZN-reset-psw .CAD{
+    width: 1300px;
+    display: flex;justify-content: center;align-items: center;
+
+}
+
+.ZN-reset-psw .CAD .reset-box{
+    width: 50%;
+    display: flex;justify-content: center;align-items: center;flex-direction: column;
+    padding: 30px 0 30px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        background: #fff;
+    border-radius: 12px;
+	
+}
+.ZN-reset-psw .CAD .reset-box .lien-invalid{
+    text-align: center;
+}
+
+.ZN-reset-psw .CAD .reset-box  .back-link{
+	margin-top: 15px;
+}
+.ZN-reset-psw .CAD .reset-box input{
+    height: 40px;
+    border: 1px solid #aaa;
+    padding: 0 5px;
+    font-size: 12px;
+    outline: none;
+    color: #2F2F2F;
+    width: 100%;
+    display: block;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.ZN-reset-psw .CAD .reset-box .form{
+    text-align: center;
+    width: 80%;
+    margin-top: 25px;
+}
+.ZN-reset-psw .CAD .reset-box  h2, .ZN-reset-psw .CAD .reset-box  p{
+	margin-bottom: 10px;
+}
+.ZN-reset-psw .CAD .reset-box .form button{
+    /* height: 40px; */
+    width: 100%;
+    background: #007bff;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    padding: 10px 40px;
+}
+#msg_reset{
+	color: red;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ section : mot de passe oublié  ------------------ */
+.ZN-psw-ob {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	height: auto;
+}
+.ZN-psw-ob .CAD{
+	display: flex;
+	justify-content: center;
+	width: 1300px;
+}
+.ZN-psw-ob .CAD .form-psw-ob{
+	display: flex; justify-content: center; align-items: center; flex-direction: column;
+	margin: 20px;
+	width: 600px;
+	padding: 40px;
+	border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0px 7px 29px  rgba(100, 100, 111, 0.2);
+    height: auto;
+}
+#frgt_psw_msg{
+	color: red;
+	margin-top: 12px;
+	font-size: 14px;
+}
+.ZN-psw-ob .CAD .form-psw-ob .back-link{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.ZN-psw-ob .CAD .form-psw-ob .back-link a {
+	color: #4A90E2; text-decoration: none;            
+}
+        
+
+.ZN-psw-ob .CAD .form-psw-ob .consignes ul .li-1{
+    font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+}
+.ZN-psw-ob .CAD .form-psw-ob .consignes ul .li-2{
+    font-size: 14px;
+    line-height: 20px;
+    color: #353535;
+    margin-top: 30px;
+    letter-spacing: 0.4px;
+	text-align: center;
+}
+.ZN-psw-ob .CAD .form-psw-ob .send_email{
+	margin-top: 30px;
+}
+
+.ZN-psw-ob .CAD .form-psw-ob .send_email input{
+	color: #2F2F2F;
+    font-size: 13px;
+    width: 350px;
+    height: 26px;
+    border: 1px solid #FFCCCC;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+	box-shadow: 0px 0px 4px  #007bff;
+	padding-left: 10px;
+}
+.ZN-psw-ob .CAD .form-psw-ob .send_email button{
+	color: #fff;
+    font-size: 14px;
+    width: 150px;
+    height: 29px;
+    border:none;
+    border-radius: 5px;
+    outline: none;
+    background:  linear-gradient(to right, #007bff, #116eff );
+    margin-left: 5px;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+	box-shadow: 0px 0px 5px #007bff
+}
+
+.ZN-psw-ob .CAD .form-psw-ob  .msg_err{
+	margin-top: 30px;
+	font-style: italic;
+	color: #DC3545;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ section : Inscription  ------------------ */
+.ZN-inscription {
+	display: flex; justify-content: center; align-items: center;
+}
+.ZN-inscription .CAD{
+	width: 1300px;
+	display: flex; justify-content: center; align-items: center;
+}
+.ZN-inscription .CAD .container-insc{	
+	border-radius: 12px; /* Arrondir les angles du formulaire */
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	margin: 40px;
+	padding: 20px 20px 0 20px;
+}
+.ZN-inscription .CAD .container-insc h2 , .ZN-inscription .CAD .container-insc h4{
+	text-align: center;
+}
+.ZN-inscription .CAD .container-insc .form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+	border-radius: 8px;
+}
+.ZN-inscription .CAD .container-insc .form .form_item_opt{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	background: #f9f9f9;
+    border-radius: 8px;
+}
+.ZN-inscription .CAD .container-insc .form .form_item_opt .instructions_block{
+	flex: 1;
+	font-size: 1.1rem;
+	color: rgba(0, 0, 0, 0.614);
+	font-size: 12px;
+} 
+/*
+
+//  ==== Pour le choix du role : locataire/propriétaire
+.ZN-inscription .CAD .container-insc .form .form_item_opt .options_user{
+	flex:1;
+	display: flex;
+	gap: 10px;
+}
+.ZN-inscription .CAD .container-insc .form .form_item_opt .options_user .option_card{
+	flex: 1;
+    cursor: pointer;
+    padding: 10px; 
+    border: 1.5px solid #e0e0e0; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.ZN-inscription .CAD .container-insc .form .form_item_opt .options_user .option_card input{
+	cursor: pointer;
+	margin-right: 5px;
+}
+.ZN-inscription .CAD .container-insc .form .form_item_opt .options_user .option_card:hover{
+	border-color: #007bff;
+	background-color: #f0f7ff;
+}
+    */
+.ZN-inscription .CAD .container-insc .form .form_item_opt .option_card:hover {
+    border-color: #007bff;
+    transform: translateY(-2px); /* Petit effet de levée */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.ZN-inscription .CAD .container-insc .form .form_item_btn button{
+     border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+	width: 350px;
+	/* height: 25px; */
+	background-color: #007bff; /* Couleur d'action */
+    color: white;
+    font-weight: 600;
+    height: 45px; /* Plus grand */
+    border: none;
+    transition: background 0.3s;	
+}
+.ZN-inscription .CAD .container-insc .form .form_item_btn button:hover {
+    background-color: #0056b3;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .msg_err{
+	color: red;
+	font-size: 12px;
+	font-style: italic;	
+	/* height: 16px; */
+	visibility: hidden;
+	padding: 7px 0 0 0;
+	/* margin-bottom: 8px; */
+}
+
+/*
+#pays{
+	margin-top: 22px;
+}*/
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form_pays, .ZN-inscription .CAD .container-insc .form .inputs .input_form_villes {
+	position: relative;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form  .select-pays{		
+		/*	position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 50px;
+    top: 12px;*/
+		}
+
+.ZN-inscription .CAD .container-insc .form .inputs  .list-indicatifs{
+	 display: flex;
+    flex-direction: column;
+    font-size: 12.5px;
+    gap: 2px;
+    margin: 2px auto;    
+	background-color: #00000010;
+}
+.ZN-inscription .CAD .container-insc .form .inputs  .list-indicatifs-container{
+	max-height: 100px;
+	overflow-y: auto;	
+	width: 97%;
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .list-indicatifs .li-ind{
+	padding: 8px 18px;    
+	cursor: pointer;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .list-indicatifs .li-ind span{
+	margin-right: 20px;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .list-indicatifs .li-ind:hover{
+	background: #00000017;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .indicatif{
+	display: flex;
+	align-items: center;
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .indicatif .select-ind {
+	/*padding: 8px;
+	width: 22%;
+    height: 33px;
+    margin-right: 6px;
+    margin-bottom: 3px;*/
+	    width: 20%;
+    margin-right: 6px;
+	color: #777;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form  .select-pays-container{
+	max-height: 180px;
+	display: none;
+	overflow-y: auto;
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .select-villes-container{
+	max-height: 100px;
+	overflow-y: scroll;
+	background-color: #eee;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .select-villes-container .list li{
+	padding: 8px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .input-select-pays{
+	margin-top: 8px;
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .select-pays li {
+			  background: #e5eef7;			  
+			  padding: 10px 15px;			  
+			  transition: background 0.3s;
+				cursor: pointer;
+			}
+
+			.ZN-inscription .CAD .container-insc .form .inputs .input_form  .select-pays li:hover {
+			  background: #e0e0e0;
+			}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form input{
+	width: 100%;
+    height: 40px; 
+    border: 1px solid #dcdcdc; 
+    box-shadow: none; 
+    padding: 0 15px;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+	outline: none;
+    border-radius: 5px;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .div-psw{
+	display:flex; flex-direction: row;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .input-icon-psw{
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 45px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form .input-icon-psw svg{
+	fill: #A6A6A6;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form input[type='date']{
+    color:  #757575;
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1); 
+}
+.ZN-inscription .CAD .container-insc .insc_tierce{
+	display: flex;
+	flex-direction: column;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form {
+	display: flex;flex-direction: column; width: 380px;
+}
+.ZN-inscription .CAD .container-insc .form .inputs .input_form select{
+	font-size: 12px;
+	background-color: #fff;
+	cursor: pointer;
+	width: 350px;
+    /* height: 25px; */
+	padding-left: 10px;
+	border: none;
+	margin-top: 5px;
+    color: #757575;
+	box-shadow: 0px 1px 8px #a875756c;
+	border-radius: 5px;
+    height: 40px; 
+    border: 1px solid #dcdcdc; 
+    box-shadow: none; 
+    padding: 0 15px;
+    background-color: #fcfcfc;
+	width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+	
+}
+
+.ZN-inscription .CAD .container-insc .form .inputs .input_form select:hover{
+	border-color: #3498db;
+}
+
+.ZN-inscription .CAD .container-insc .insc_tierce{
+	margin-top: 20px;
+	margin-bottom: 40px;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;;
+}
+.ZN-inscription .CAD .container-insc .insc_tierce button{
+	 border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+	width: 350px;
+	/*height: 25px;*/
+	height: 40px;
+    /* border: 1px solid #dcdcdc; */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+}
+
+.ZN-inscription .CAD .container-insc .insc_tierce button:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+.ZN-inscription .CAD .container-insc .insc_tierce span{
+	color: rgba(0, 0, 0, 0.83);
+	font-size: 14px;
+	margin-top: 8px;
+	a{
+		color : rgb(42, 42, 149);
+	}
+}
+.ZN-inscription .CAD .container-insc .form .form_item_CG{
+	color: rgba(0, 0, 0, 0.614);
+	font-size: 12px;
+	margin: 16px auto;
+}
+
+.ZN-inscription .CAD .container-insc .form .form_item_CG a{
+	color: blue;
+	font-style: italic;
+	
+}
+
+.ZN-inscription .CAD .container-insc  .mode-reservation{	
+	font-size: 12px;
+	color: blue;
+	margin: 5px 0 10px 0;
+}
+
+
+
+
+
+
+
+
+
+/* ============  formulaire de recherche ============  */
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+	color : #fff;
+	cursor: pointer;
+	margin-top: 5px;
+}
+.checkbox-container input, .checkbox-container span{
+	cursor: pointer;
+	font-size: 14px;
+}
+#lieuRetour{
+	display: none;
+}
+
+
+
+/* ==============   section contenant espace perso  ============== */
+		.zn-espace{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.zn-espace .zn-espace-cad{
+			width: 1300px;
+			display:flex; justify-content: center;
+			
+		}
+		
+
+
+
+
+
+
+
+/* style commun */
+.options-list{
+			display: flex;
+			gap:6px;
+			justify-content: flex-end;
+	    	padding-left: 5px;
+		}	
+		.option-badge{
+		background: rgba(30, 58, 95, 0.08);
+    color: #1e3a5f;
+			font-size: 10px;
+			font-weight: 500;
+			padding: 0px 8px;
+			border-radius: 20px;
+			letter-spacing: 0.02em;
+			border: 1px solid rgba(6, 212, 189, 0.2);
+		}
+
+
+
+
+
+   
+
+
+
+
+
+
+	/* parc  */
+	
+	/*	.ZN-form-search{
+			display: flex; justify-content: center;		
+		}
+		.ZN-form-search-cad h1 {
+			font-weight: 700;
+			color: #ffffff;
+			margin-bottom: 6px;
+		}
+
+		.ZN-form-search-cad h2 {
+			font-size: 15px;
+			font-weight: 400;
+			color: #f1f1f1;
+			margin: 0 auto 25px;	
+			margin-bottom: 45px;
+		}
+		.ZN-form-search .ZN-form-search-cad{
+			width: auto;
+			background: linear-gradient(135deg, #1A1A2E 0%, #2D1B1A 40%, #C0392B 100%);
+			padding: 80px 20px 34px 20px;
+			position: relative;
+			overflow: hidden;
+			margin-top: 8px; 
+		}
+		
+		
+		.ZN-parc{
+			display: flex; justify-content: center; align-items: center;
+		}
+		.ZN-parc .ZN-parc-cad{
+			width: 1300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.ZN-parc .ZN-parc-cad .parc{
+			display: flex;
+			margin-bottom: 40px;
+           	gap: 25px;
+          	align-items: flex-start;
+			width: 80%;
+		}
+		.ZN-parc .ZN-parc-cad main{
+			width: 1000px;
+		}
+		.sidebar{
+			width: 200px;
+			border-top: 1px solid #D9DADF;
+			border-left: 1px solid #D9DADF;
+			border-right: 1px solid #D9DADF;
+			padding: 10px 14px;
+		}
+		.sidebar-header{
+			display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+		}
+		.sidebar-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+		}
+		 .sidebar-header button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            color:#7a7a92 ;
+            cursor: pointer;
+        }
+		 .filter-section {
+            margin: 20px auto;
+        }
+		 .filter-section h3 {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            color:#7a7a92 ;
+            margin-bottom: 12px;
+        }
+		
+        .filter-option {
+            display: flex;
+            align-items: center;            
+            padding: 5px 0;
+            cursor: pointer;
+			gap: 10px;
+        }
+		.filter-option input[type="checkbox"] {
+            display: none;
+        }
+		 .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #D9DADF;
+           display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+        }
+		
+        .filter-option input:checked ~ .checkbox {
+            background: #3a7bd5;
+            border-color: #3a7bd5;
+        }
+		
+		  .filter-option input:checked ~ .checkbox::after {
+            content: '✓';
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+        }
+		
+		
+		 .filter-label {
+            font-size: 12px;
+            color: #2c2c3e;
+        }
+		 .sidebar-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+		
+        .btn-appliquer {
+            background: #3a7bd5;
+            color: #fff;
+            border: none;
+            padding: 11px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;     
+        }
+		.btn-reset {
+            width: 42px;
+            background: #f7f4ef;
+            border: 1px solid #D9DADF;     
+            cursor: pointer;
+			color: #7a7a92;
+            font-size: 18px;
+        }
+		 .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+			 padding-top: 18px;
+        }
+		
+        .results-count {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            color: #1a1a2e;
+        }
+		
+        .results-count span {
+            color:#e8703a;
+        }
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+
+        }
+   		.car-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+           
+            overflow: hidden;
+			box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);
+			border-radius: 10px;
+			padding: 8px;
+        }
+		.car-card:hover{
+			transform: translateY(-4px);
+			box-shadow: 0 16px 45px rgba(26,26,46,0.1);
+		}
+		.car-img {
+           width: 100%;
+            height: 90px;
+			text-align: center;       
+        }
+		.car-img img{
+			width: 70%;
+			height: 100%;
+		}
+		 .card-body {
+            padding: 7px;
+        }
+ 		.car-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+		 
+		  .car-specs {
+            font-size: 12.5px;
+            color: #7a7a92;
+            margin-bottom: 7px;
+        }
+		 .car-location {
+			 color: #7a7a92;
+			 font-size: 12.5px;
+             margin-bottom: 8px;
+        }
+		 .card-price {
+            border-top: 1px solid #111;
+            padding-top: 13px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+			 color: #000;
+        }*/
+
+
+
+
+	
+	  
+/*  CARTE VOITURE  */
+
+
+
+.car-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: box-shadow 0.25s, transform 0.25s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+	position: relative;
+}
+
+.car-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    transform: translateY(-3px);
+}
+
+.car-img {
+    position: relative;
+    background: #f5f6fa;
+    height: 160px;    
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-img img {
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s;
+}
+
+.car-card:hover .car-img img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.car-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.car-specs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666;
+}
+
+.type-carb, .anee {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.car-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.car-location svg {
+    width: 14px;
+    height: 14px;
+    color: #aaa;
+}
+
+.card-price {
+    margin-top: 8px;
+}
+
+.price-main {
+    font-size: 20px;
+    font-weight: 800;
+    color: #e63946;
+}
+
+.price-unit {
+    font-size: 13px;
+    font-weight: 500;
+    color: #aaa;
+    margin-left: 2px;
+}
+
+
+.save-vehicule{		
+	position: absolute;
+	inset: 4px 4px auto auto;
+	z-index: 1;
+}
+
+.save-vehicule svg{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;	    
+    box-shadow: 5px 5px 10px #000000ad;
+    padding: 6px;
+}
+.save-vehicule.fill svg{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;	    
+    box-shadow: 5px 5px 10px #FCC6BB;
+    padding: 6px;
+	fill: red;	
+}
+.save-vehicule.fill {
+	display: none;
+}
+
+.save-vehicule svg:hover{
+	fill: #C0392B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  design responsif  */
+@media (max-width: 1300px) {
+  .ZN-top-form .ZN-top-form-cad,
+  .ZN-categories .ZN-categories-cad,
+  .ZN-marques .ZN-marques-cad,
+  .ZN-pk-nous .ZN-pk-nous-cad,
+  .ZN-villes .ZN-villes-cad,
+  .ZN-contact .ZN-contact-cad,
+  .ZN-newsletter .ZN-newsletter-cad,
+  .ZN-qlq-vehicule .ZN-qlq-vehicule-cad,
+  .ZN-AUTH .CAD,
+  .ZN-reset-psw .CAD,
+  .ZN-psw-ob .CAD,
+  .ZN-inscription .CAD,
+  .zn-espace .zn-espace-cad {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ZN-top-form .ZN-top-form-cad {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .ZN-top-form .ZN-top-form-cad .top {
+    width: 80%;
+    margin: 60px 0 0 40px;
+  }
+  .ZN-top-form .ZN-top-form-cad .search {
+    margin-left: 40px;
+  }
+  .ZN-categories .ZN-categories-cad .categories-conteneur {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ZN-pk-nous .ZN-pk-nous-cad .cards {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .ZN-contact .ZN-contact-cad .contacts {
+    flex-wrap: wrap;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter .assistance {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing input {
+    width: 100%;
+  }
+  .ZN-AUTH .auth-container {
+    max-width: 90%;
+    margin: 20px;
+  }
+  .ZN-inscription .CAD .container-insc .form .inputs .input_form {
+    width: 100%;
+  }
+  .ZN-inscription .CAD .container-insc .form .form_item_btn button,
+  .ZN-inscription .CAD .container-insc .insc_tierce button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ZN-top-form .ZN-top-form-cad .top {
+    width: 90%;
+    margin: 40px 0 0 20px;
+  }
+  .ZN-top-form .ZN-top-form-cad .search {
+    margin-left: 20px;
+  }
+  .ZN-categories .ZN-categories-cad .categories-conteneur {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ZN-pk-nous .ZN-pk-nous-cad .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ZN-pk-nous .ZN-pk-nous-cad .cards .card {
+    border-right: none;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+  }
+  .ZN-villes .ZN-villes-cad .carroussel .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ZN-villes .ZN-villes-cad .carroussel .container .image {
+    flex: 0 0 45%;
+  }
+  .ZN-contact .ZN-contact-cad .contacts {
+    flex-direction: column;
+  }
+  .ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .ZN-AUTH .CAD {
+    flex-direction: column;
+  }
+  .ZN-AUTH .auth-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .ZN-reset-psw .CAD .reset-box {
+    width: 85%;
+  }
+  .ZN-psw-ob .CAD .form-psw-ob {
+    width: 90%;
+    padding: 25px;
+  }
+  .ZN-psw-ob .CAD .form-psw-ob .send_email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .ZN-psw-ob .CAD .form-psw-ob .send_email input {
+    width: 100%;
+  }
+  .ZN-psw-ob .CAD .form-psw-ob .send_email button {
+    margin-left: 0;
+    width: 100%;
+  }
+  .ZN-inscription .CAD .container-insc .form .form_item_opt {
+    flex-direction: column;
+  }
+  .ZN-inscription .CAD .container-insc .form .inputs .input_form {
+    width: 100%;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter .assistance .emailing button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ZN-top-form .ZN-top-form-cad .top h1 {
+    font-size: 22px;
+  }
+  .ZN-top-form .ZN-top-form-cad .top {
+    margin-top: 30px;
+  }
+  .ZN-categories .ZN-categories-cad .categories-conteneur {
+    grid-template-columns: 1fr;
+  }
+  .ZN-qlq-vehicule .ZN-qlq-vehicule-cad .cards .container {
+    grid-template-columns: 1fr;
+  }
+  .ZN-villes .ZN-villes-cad .carroussel .container .image {
+    flex: 0 0 90%;
+  }
+  .ZN-villes .ZN-villes-cad .see-more {
+    padding-right: 10px;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter {
+    padding: 20px;
+  }
+  .ZN-newsletter .ZN-newsletter-cad .newletter .assistance {
+    width: 100%;
+    padding: 10px;
+  }
+  .ZN-AUTH .auth-form {
+    padding: 20px 15px;
+  }
+  .ZN-AUTH .auth-header h2 {
+    font-size: 22px;
+  }
+  .ZN-reset-psw .CAD .reset-box {
+    width: 95%;
+  }
+  .ZN-inscription .CAD .container-insc {
+    margin: 15px;
+    padding: 15px;
+  }
+  .ZN-marques .ZN-marques-cad .carrousel {
+    width: 100%;
+  }
+  .titre-index {
+    font-size: 18px;
+  }
+}
