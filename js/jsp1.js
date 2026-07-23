@@ -1,20 +1,28 @@
+const list = document.getElementById('languesList');
+const lg=document.querySelector('.lg');
 function afficherLangues(e) {
-  const list = document.getElementById('languesList');
-  //e.stopPropagation(); // empêche le document de capter le clic
-  if (list.style.display === "block") {
-    list.style.display = "none";
-  } else {
-    list.style.display = "block";
-    const imgLangues = document.querySelectorAll('#languesList li');
-    imgLangues.forEach(li => {
-      li.addEventListener('click', () => {
-        const img = li.querySelector('img');
-        let langue = img.alt;
-        currentImg.src = img.src;
-        list.style.setProperty('display', 'none', 'important');
-        localStorage.setItem('langue', langue);
-        window.location.href = window.location.pathname + "?langue=" + langue;
-      })
-    })
+  list.style.display  =  list.style.display === "none" ? "block" : "none"; 
+}
+document.addEventListener('click' ,(e)=>{
+  if(!lg.contains(e.target)){
+   list.style.display="none" ;
   }
+})
+
+
+
+function retourDiff() {	
+  const retourDiffCheckbox = document.getElementById('retourDiffCheckbox');
+  const lieuRetour = document.getElementById('lieuRetour');
+  const lieuDepartInput = document.getElementById('lieu');
+  const lieuArriveeInput = document.getElementById('lieu2');	
+	if(lieuArriveeInput.value==''){
+		lieuArriveeInput.value=lieuDepartInput.value;
+	}
+  if (retourDiffCheckbox.checked) {
+    lieuRetour.style.display = "block"
+  } else {
+    lieuRetour.style.display = "none"
+  }
+
 }

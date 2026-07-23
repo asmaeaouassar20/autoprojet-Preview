@@ -12,15 +12,12 @@ require_once( "include/inc-3.php" ); //fct php de "général"
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/style.css"> 
 <link rel="stylesheet" href="css/style1.css"> <!-- index.php -->
-<link rel="stylesheet" href="css/style6.css"> <!-- header - footer - search form - message d'erreur -->
 
 <title>Location de voiture</title>
 </head>
 
 <body>
-<?php popup_erreur(); ?>
 <?php header_ZN(); ?>
 <section class="ZN-top-form">
   <div class="ZN-top-form-cad">
@@ -57,7 +54,7 @@ require_once( "include/inc-3.php" ); //fct php de "général"
 <section class="ZN-villes">
   <div class="ZN-villes-cad">
     <h2 class="titre-index">Partez de la <span class="cat">ville</span> de votre choix</h2>
-    <div class="see-more"><a href="general/villes.php">Afficher plus</a></div>
+    <div class="see-more"><a href="asmae.php">Afficher plus</a></div>
     <div class="carroussel">
       <div class="container">
         <?php afficherVilles() ?>
@@ -79,7 +76,7 @@ require_once( "include/inc-3.php" ); //fct php de "général"
   <div class="ZN-pk-nous-cad">
     <h2 class="titre-index">Pourquoi <span class="cat">Choisir</span> Autoprojet</h2>
   			<?php afficherPKNous(); ?>
-    <div class="btn"><a href="general/apropos.php">En savoir plus</a></div>
+    <div class="btn"><a href="asmae.php">En savoir plus</a></div>
   </div>
 </section>
 <section class="ZN-contact">
@@ -126,12 +123,12 @@ require_once( "include/inc-3.php" ); //fct php de "général"
       <div class="assistance">
         <div class="contactez-nous"> <span class="icone">
           <?php ico_assistance() ?>
-          </span> <a href="general/contact.php">Contactez nous</a> </div>
+          </span> <a href="asmae.php">Contactez nous</a> </div>
         <div class="emailing">
           <div class="mail"> <span id='msg_err_email_NL' class="msg_err_global"></span>
             <input type="email" placeholder="votre adresse email ..." id="emailNewsLetter" onblur="validerEmailNewsletter()" >
           </div>
-          <button onClick="sinscrireNewsLetter()" >S'inscrire</button>
+          <a href="asmae.php" >S'inscrire</a>
         </div>
       </div>
     </div>

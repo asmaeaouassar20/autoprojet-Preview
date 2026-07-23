@@ -3,33 +3,33 @@
 
 // fct php header, footer , form
 
-function header_ZN() {
-  $ico_cnx = ico_connexion();
-  $ico_decnx = ico_deconnexion();
-  	
-  echo '<header class="ZN-H">
+function header_ZN()
+{
+	$ico_cnx = ico_connexion();	
+
+	echo '<header class="ZN-H">
 			<div class="CAD">
 				<div class="D1"><a href="#"><img id="logoautoprojet" src="img/icon/mini_autoprojet.png"  alt="Logo"/></a></div>
 				<div class="D2">
 					<ul>
-						<li><a href=""><span>Parcourir les voitures</span></a></li>						
-						<li><a href=""><span>Partenaire</span></a></li>
-						<li><a href=""><span>À propos de nous</span></a></li>
-						<li><a href=""><span>CGU</span></a></li>
-						<li><a href=""><span>Contact</span></a></li>
+						<li><a href="asmae.php"><span>Parcourir les voitures</span></a></li>						
+						<li><a href="asmae.php"><span>Partenaire</span></a></li>
+						<li><a href="asmae.php"><span>À propos de nous</span></a></li>
+						<li><a href="asmae.php"><span>CGU</span></a></li>
+						<li><a href="asmae.php"><span>Contact</span></a></li>
 					</ul>
 				</div>
 				<div class="D3">									
 					<span class="s1">' . $ico_cnx . '</span>
-					<a href="../user/login.php">Connexion</a>
+					<a href="asmae.php">Connexion</a>
 					<span class="s2"> / </span>
-					<a href="../user/inscription.php">Inscription</a>
+					<a href="asmae.php">Inscription</a>
 					<div class="lg" onClick="afficherLangues()">
 							<img src="img/icon/langues/fr.png" width="" height="" alt="fr" id="btnLangues" />
 						 <ul id="languesList" >
-							<li>Français<img src="img/icon/langues/fr.png" width="" height="" alt="fr"/ ></li>
-							<li>Arabe<img src="img/icon/langues/ar.png" width="" height="" alt="ar"/></li>
-							<li>Anglais<img src="img/icon/langues/en.png" width="" height="" alt="en"/></li>
+							<li><a href="asmae.php">Français<img src="img/icon/langues/fr.png" width="" height="" alt="fr"/ ></a></li>
+							<li><a href="asmae.php">Arabe<img src="img/icon/langues/ar.png" width="" height="" alt="ar"/></a></li>
+							<li><a href="asmae.php">Anglais<img src="img/icon/langues/en.png" width="" height="" alt="en"/></a></li>
 						</ul> 
 					</div>
 				</div>
@@ -38,23 +38,24 @@ function header_ZN() {
 }
 
 
-function ZN_footer() {
-  $ico_phone = ico_phone();
-  $ico_instagram = ico_instagram();
-  $ico_tiktok = ico_tiktok();
-  $ico_youtube = ico_youtube();
-  $ico_linkedin = ico_linkedin();
-  $ico_facebook = ico_facebook();
-  $ico_email = ico_email();
-  $ico_localisation = ico_localisation();
-  $ico_available = ico_available();
+function ZN_footer()
+{
+	$ico_phone = ico_phone();
+	$ico_instagram = ico_instagram();
+	$ico_tiktok = ico_tiktok();
+	$ico_youtube = ico_youtube();
+	$ico_linkedin = ico_linkedin();
+	$ico_facebook = ico_facebook();
+	$ico_email = ico_email();
+	$ico_localisation = ico_localisation();
+	$ico_available = ico_available();
 
-  $PCPATH = "#";
-  $APROPOSPATH = "#";
-  $CGUPATH ="#";
-  $CONTACTPATH ="#";
+	$PCPATH = "#";
+	$APROPOSPATH = "#";
+	$CGUPATH = "#";
+	$CONTACTPATH = "#";
 
-  echo '<footer>
+	echo '<footer>
 		<div class="footer-cad">
 		<div class="footer-cad1">
 			<div class="overlay"></div>
@@ -128,11 +129,12 @@ function ZN_footer() {
 }
 
 
-function ZN_search_form() {
+function ZN_search_form()
+{
 
-  $pageCourante = basename( $_SERVER[ 'PHP_SELF' ] );
+	$pageCourante = basename($_SERVER['PHP_SELF']);
 
-  echo '
+	echo '
 			<div class="reservation-form">
 					<div class="form-group form-group-lieu">
 						<label>Lieu de départ</label>
@@ -142,13 +144,7 @@ function ZN_search_form() {
 									<!--
 										<li>test1</li>
 										<li>test2</li>
-										<li>test3</li>
-										<li>test4</li>
-										<li>test5</li>
-										<li>test6</li>
-										<li>test7</li>
-										<li>test7</li>
-										<li>test7</li>
+										<li>test3</li>										
 										-->
 									</ul>
 								</div>
@@ -159,12 +155,7 @@ function ZN_search_form() {
 							<div class="container-suggestions1" id="container-suggestions2">
 								<ul id="suggestions2">
 								<!--
-										<li>test1</li>
-										<li>test2</li>
-										<li>test3</li>
-										<li>test4</li>
-										<li>test5</li>
-										<li>test6</li>
+									
 										<li>test7</li>
 										<li>test7</li>
 										<li>test7</li>
@@ -191,32 +182,18 @@ function ZN_search_form() {
 							
 							<input type="time" id="heure2" >
 						</div>
-					</div>';
-//   if ( $pageCourante == 'parc.php' ) {
-//     echo '<button  class="btn-submit" onclick="filtrer()">Rechercher </button>';
-//   }
-//   if ( $pageCourante == 'index.php' ) {
-//     echo '<button  class="btn-submit" onclick="filtrerFromIndex()">Rechercher </button>';
-//   }
-
-
-  echo '
-			</div>
+					</div>
+					<a  class="btn-submit" href="asmae.php">Rechercher </a>
+					</div>
 			<div class="checkbox-container"  >
 				<label>
 					<input type="checkbox" id="retourDiffCheckbox" onchange="retourDiff()" />
 					<span>Retour dans un autre lieu</span>
 				</label>
 			</div>
-		';
+					';
 }
 
-
-function popup_erreur() {
-  echo '<div class="erreur-popup" id="erreur-popup">
-		<span id="message-erreur"></span>
-	</div>';
-}
 
 
 
